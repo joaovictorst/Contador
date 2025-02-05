@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: "Roboto", serif;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.contador {
+    background-color: #282a36;
+    height: 100%;
+}
+
+.calc {
+    position: absolute;
+    background-color: #434558;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 8px;
+
+    border-radius: 16px;
+    width: 250px;
+    height: 350px;
+
+    display: grid;
+    place-items: center;
+    color: white;
+
+    padding: 8px;
+}
+
+.display-count {
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #282a36;
+}
+
+.buttons {
+    width: 100%;
+    gap: 8px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.input-count {
+    padding: 0 8px;
+    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.buttonPlus{
+    background-color: #50fa7b;
+}
+
+.buttonLess{
+    background-color: #ff5555;
+}
+
+.plus10, .less10 {
+    background-color: #bd93f9;
+}
+
+.plusThousand, .lessThousand {
+    background-color: #ff79c6;
+}
+
+.input-count button {
+    background-color: #8ae8fc;
+}
+
+.input-count input {
+    height: 20px;
+    width: 150px ;
+}
