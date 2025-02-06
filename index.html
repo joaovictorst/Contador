@@ -3,38 +3,38 @@
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <script src="./script.js" defer></script>
     <title>Contador</title>
 </head>
 
 <body>
-    <div class="contador">
-        <div class="calc">
-            <h1>Contador</h1>
-            <div class="display-count"></div>
-            <div class="buttons">
-                <button class="buttonPlus">+1</button>
-                <button class="buttonLess">-1</button>
-                <button class="plus10">+10</button>
-                <button class="less10">-10</button>
-                <button class="plusThousand">+1000</button>
-                <button class="lessThousand">-1000</button>
-            </div>
-            <div id="input-count" class="input-count">
-                <input type="number">
-                <button>+</button>
-                <button>-</button>
-            </div>
-
-            <button class="reset">Resetar</button>
+    <div class="calc">
+        <h1>Contador</h1>
+        <div id="display-count" class="display-count">0</div>
+        <div class="buttons">
+            <button onclick="some(this)" class="buttonPlus">+1</button>
+            <button onclick="some(this)" class="buttonLess">-1</button>
+            <button onclick="some(this)" class="plus10">+10</button>
+            <button onclick="some(this)" class="less10">-10</button>
+            <button onclick="some(this)" class="plusThousand">+1000</button>
+            <button onclick="some(this)" class="lessThousand">-1000</button>
         </div>
+        <form id="input-count" class="input-count">
+            <input id="formValue" type="number">
+            <input onclick="formSome(this)" class="plusInput" type="button" value="+">
+            <input onclick="formSome(this)" class="lessInput" type="button" value="-">
+        </form>
 
+        <button onclick="reset()" class="reset">Resetar</button>
     </div>
-
 </body>
 
 </html>

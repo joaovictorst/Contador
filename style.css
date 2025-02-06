@@ -3,29 +3,31 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 100%;
-    font-family: "Roboto", serif;
+    font-family: "Poppins", serif;
 }
 
-button {
+button,.input-count .plusInput,.input-count .lessInput {
     background-color: transparent;
     border: none;
     border-radius: 4px;
-    height: 30px;
+    height: 40px;
 
     transition: 0.3s;
+
 }
 
 button:hover {
     cursor: pointer;
-    opacity: 0.8;
+    color: white;
 }
 
-.contador {
+body {
     background-color: #282a36;
-    height: 100%;
 }
 
 .calc {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     background-color: #434558;
     top: 50%;
@@ -33,38 +35,44 @@ button:hover {
     transform: translate(-50%, -50%);
     gap: 8px;
 
-    border-radius: 16px;
-    width: 250px;
-    height: 350px;
-
-    display: grid;
-    place-items: center;
     color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
 
-    padding: 8px;
+    gap: 16px;
+    padding: 30px;
+}
+
+.calc h1{
+    letter-spacing: 5px;
+    font-size: 25px;
 }
 
 .display-count {
-    width: 90%;
-    height: 60px;
+    width: 100%;
+    height: 70px;
     border-radius: 10px;
     background-color: #282a36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
 }
 
 .buttons {
     width: 100%;
     gap: 8px;
-    padding: 8px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .input-count {
-    padding: 0 8px;
-    gap: 8px;
+    display: flex;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    grid-template-columns: 4fr 1fr 1fr;
+    gap: 8px;
 }
 
 .buttonPlus{
@@ -83,11 +91,30 @@ button:hover {
     background-color: #ff79c6;
 }
 
-.input-count button {
-    background-color: #8ae8fc;
+.input-count .plusInput, .input-count .lessInput {
+    background-color: rgb(138, 232, 252);
 }
 
-.input-count input {
-    height: 20px;
-    width: 150px ;
+.input-count .plusInput:hover, .input-count .lessInput:hover {
+    background-color: rgba(138, 232, 252, 0.8);
+    cursor: pointer;
+}
+
+.input-count input{
+    border-radius: 4px;
+    border: 1px #4b5475;
+    background-color: #282a36;
+    -moz-appearance: textfield;
+    color: white;
+}
+
+.reset {
+    background-color: #6272a4;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+}
+
+.reset:hover {
+    color: rgb(218, 218, 218);
 }
