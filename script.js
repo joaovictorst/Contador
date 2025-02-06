@@ -1,16 +1,23 @@
 
-let display = document.getElementById('display-count')
+let innerText = document.getElementById('innerHTML');
+
+let display = document.getElementById('display-count');
 
 let count = 0;
 
+function formatTitle(num){
+    display.setAttribute('title', num)
+}
+
 function reset() {
     count = 0;
-    display.innerHTML = count;
+    display
+    innerText.innerHTML = count;
 }
 
 function some(object) {
 
-    let som = display.innerText
+    let som = innerText.innerText
     // o regex mais esse split irá quebrar o que tem dentro
     // do valor desse objeto. por padrão todo valor dentro
     // dele irá vir com um operador no inicio como + e -,
@@ -23,11 +30,13 @@ function some(object) {
     switch(operation){
         case "+":
             count += parseInt(number);
-            display.innerText = count;
+            formatTitle(count)
+            innerText.innerHTML = count.toLocaleString('pt-BR');
         break
         case "-":
             count -= parseInt(number);
-            display.innerText = count;
+            formatTitle(count)
+            innerText.innerHTML = count.toLocaleString('pt-BR');
         break
     }
 }
@@ -39,9 +48,11 @@ function formSome(object) {
     
     if(operator == "+"){
         count += value
-        display.innerText = count;
+        formatTitle(count)
+        innerText.innerHTML = count.toLocaleString('pt-BR');
     }else{
         count -= value
-        display.innerText = count;
+        formatTitle(count)
+        innerText.innerHTML = count.toLocaleString('pt-BR');
     }
 }
