@@ -4,16 +4,36 @@
     box-sizing: border-box;
     font-size: 100%;
     font-family: "Poppins", serif;
+    font-size: 20px;
+
 }
 
-button,.input-count .plusInput,.input-count .lessInput {
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button,
+.input-count .plusInput,
+.input-count .lessInput {
     background-color: transparent;
     border: none;
-    border-radius: 4px;
-    height: 40px;
+    border-radius: 24px;
+    height: 60px;
 
     transition: 0.3s;
 
+    -webkit-box-shadow: 0px 0px 34px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 34px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 34px 3px rgba(0, 0, 0, 0.3);
+
+}
+
+button span {
+    
+    font-size: 40px;
 }
 
 button:hover {
@@ -33,84 +53,113 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    gap: 8px;
 
     color: white;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 24px;
 
     gap: 16px;
-    padding: 30px;
+    padding: 50px;
+
+    width: 500px;
 }
 
-.calc h1{
+.calc h1 {
     letter-spacing: 5px;
-    font-size: 25px;
+    font-size: 56px;
+    margin: 25px 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to left,#f684de,#cf8ae8);
 }
 
 .display-count {
     width: 100%;
-    height: 70px;
-    border-radius: 10px;
+    height:200px;
+    border-radius: 24px;
     background-color: #282a36;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 100px;
+    font-weight: bold;
+
+    -webkit-box-shadow: inset 0px 0px 34px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: inset 0px 0px 34px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0px 0px 34px 3px rgba(0, 0, 0, 0.12);
+
+    margin-bottom: 25px;
 }
 
 .buttons {
     width: 100%;
-    gap: 8px;
+    gap: 16px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .input-count {
+    width: 100%;
     display: flex;
     display: grid;
     grid-template-columns: 4fr 1fr 1fr;
-    gap: 8px;
+    gap: 16px;
 }
 
-.buttonPlus{
+.input-count input {
+    width: 100%;
+}
+
+.buttonPlus {
     background-color: #50fa7b;
 }
 
-.buttonLess{
+.buttonLess {
     background-color: #ff5555;
 }
 
-.plus10, .less10 {
+.plus10,
+.less10 {
     background-color: #bd93f9;
 }
 
-.plusThousand, .lessThousand {
+.plusThousand,
+.lessThousand {
     background-color: #ff79c6;
 }
 
-.input-count .plusInput, .input-count .lessInput {
+.input-count .plusInput,
+.input-count .lessInput {
     background-color: rgb(138, 232, 252);
 }
 
-.input-count .plusInput:hover, .input-count .lessInput:hover {
+.input-count .plusInput:hover,
+.input-count .lessInput:hover {
     background-color: rgba(138, 232, 252, 0.8);
     cursor: pointer;
 }
 
-.input-count input{
-    border-radius: 4px;
+.input-count input {
+    border-radius: 24px;
     border: 1px #4b5475;
     background-color: #282a36;
     -moz-appearance: textfield;
     color: white;
+    padding: 20px;
+    -webkit-box-shadow: inset 0px 0px 34px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: inset 0px 0px 34px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0px 0px 34px 3px rgba(0, 0, 0, 0.12);
+}
+
+.input-count input:focus {
+    
 }
 
 .reset {
     background-color: #6272a4;
-    border-radius: 8px;
+    border-radius: 24px;
     width: 100%;
     color: white;
 }
